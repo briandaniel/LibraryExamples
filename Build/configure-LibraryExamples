@@ -27,8 +27,8 @@ cmake \
 -D OCTAVE_LIB_PATH=$OCTAVE_LIB_DIR \
 -D PNOL_INSTALL_DIR=$PNOL_DIR/Install \
 -D NAS_INSTALL_DIR=$NAS_DIR/Install \
--D CMAKE_CXX_FLAGS:STRING="-g -O3 -march=native -std=c++0x -fopenmp -pedantic -fno-var-tracking -fprofile-arcs -ftest-coverage " \
--D CMAKE_C_FLAGS:STRING="-g -O3 -march=native -std=c++0x -fopenmp -pedantic -fno-var-tracking -fprofile-arcs -ftest-coverage " \
+-D CMAKE_CXX_FLAGS:STRING="-g -O3 -march=native -std=c++0x -fopenmp -fno-var-tracking -fprofile-arcs -ftest-coverage " \
+-D CMAKE_C_FLAGS:STRING="-g -O3 -march=native -std=c++0x -fopenmp -fno-var-tracking -fprofile-arcs -ftest-coverage " \
 -D UtilityFunctionLibrary_INSTALL_DIR=$UtilityFunctionLibrary_DIR/Install/ \
 \
 $SOURCE_DIR

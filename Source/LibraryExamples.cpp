@@ -24,22 +24,56 @@ int main(int argc, char** argv) {
 	bool success = 0;
 
 	int solutionSetting = 0;
-	if( argc > 1 )
+
+	// If no solution setting is given display help
+	if( argc <= 1 )
 	{
-		solutionSetting = argv[1][0] - '0';
+		displayHelp();
+		solutionSetting = -1;
 	}
-	if(procID == ROOT_ID) cout << "Solution setting = " << solutionSetting << endl;
+	else
+	{
+		solutionSetting = strtol(argv[1], NULL, 10);
+		if(procID == ROOT_ID) cout << "Solution setting = " << solutionSetting << endl;
+	}
 
 
 
-	if( solutionSetting == 0 )
+	if( solutionSetting == 202 )
 	{
 		testNewtonsMethod();
-
 	}
-	else if ( solutionSetting == 1 )
+	else if ( solutionSetting == 101 )
 	{
-
+		testBFGSBndMPISW();
+		testBFGSBnd();
+		testBFGSBnd_MPI();
+		testLMExpMPI();
+		testBFGS_MPI();
+		testBFGS_booth();
+		testBFGS();
+		testHessian();
+		testGAParallel();
+		testGA();
+		testLMExp();
+		testLMCubicLinearCoef();
+		testSimplexSearch();
+		testCreateObject();
+		testGradientEvaluation();
+		testGradientApproxMultMPI();
+		testGradientApproxMultMPIRecur();
+	}
+	else if ( solutionSetting == 102)
+	{
+		testBFGSBndMPISW();
+	}
+	else if ( solutionSetting == 103)
+	{
+		testBFGSBnd();
+	}
+	else
+	{
+		cout << "That solution setting does not exist :-(" << endl;
 	}
 
 
@@ -54,6 +88,29 @@ int main(int argc, char** argv) {
 	return (success);
 
 }
+
+
+
+void displayHelp()
+{
+	cout << endl << "No solution setting given. Choose from: " << endl;
+	cout << "  101: Run all the optimization examples" << endl;
+	cout << "  102: testBFGSBndMPISW();" << endl;
+	cout << "  103: testBFGSBnd();" << endl;
+
+	cout << "  201: Run all the nonlinear solver examples" << endl;
+	cout << "  202: Run the Newton's method example" << endl;
+
+
+	cout << endl;
+}
+
+
+
+
+
+
+
 
 
 

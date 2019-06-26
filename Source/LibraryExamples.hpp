@@ -27,6 +27,8 @@ using namespace std;
 
 // Library includes
 #include "Nonl_Examples.hpp"
+#include "ExamplesVis.hpp"
+#include "Examples.hpp"
 
 // Standard constant definitions
 #define PI 3.141592653589793
@@ -38,6 +40,8 @@ using namespace std;
 
 
 
+// local functions
+void displayHelp();
 
 
 
