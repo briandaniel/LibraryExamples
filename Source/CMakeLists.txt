@@ -55,6 +55,11 @@ include_directories( ${PNOL_INSTALL_DIR}/include )
 find_library(NAS_LIBRARY_PATH nas HINTS "${NAS_INSTALL_DIR}/lib")
 include_directories( ${NAS_INSTALL_DIR}/include )
 
+# 7. Cardiovascular function library
+find_library(CARDIOVASCULAR_LIBRARY_PATH cardiovascularLibrary HINTS "${CardiovascularLibrary_INSTALL_DIR}/lib")
+include_directories( ${CardiovascularLibrary_INSTALL_DIR}/include )
+
+
 # Add the execubale using the source files in (src)
 add_executable(LibraryExamples ${LIBRARY_EXAMPLES_SRC_APPLICATION})
 
@@ -68,6 +73,7 @@ target_link_libraries(
 	${VTK_LIBRARIES}
 	${UTILITYFUNCTION_LIBRARY_PATH}
 	${VTKFUNCTION_LIBRARY_PATH}
+	${CARDIOVASCULAR_LIBRARY_PATH}
 	${PNOL_LIBRARY_PATH}
 	${NAS_LIBRARY_PATH}
 	${OCTAVE_LIBRARY_PATH}

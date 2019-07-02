@@ -71,6 +71,21 @@ int main(int argc, char** argv) {
 	{
 		testBFGSBnd();
 	}
+	else if ( solutionSetting = 301)
+	{
+		ParamSingleFiberVarRes lumpPrm ;
+
+		// variables
+		vector <double> w (lumpPrm.Nvars,0);
+		vector <double> Xnewt (lumpPrm.Nnewt,0);
+
+		// Output final result
+		lumpPrm.Ncyc = 10;
+
+		computeSingleFiberVarRes( w, Xnewt, lumpPrm );
+		computeSingleFiberVarRes( w, Xnewt, lumpPrm );
+
+	}
 	else
 	{
 		cout << "That solution setting does not exist :-(" << endl;

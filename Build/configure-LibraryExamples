@@ -8,6 +8,7 @@ UtilityFunctionLibrary_DIR=$HOME/CppLibraries/UtilityFunctionLibrary
 VTKFunctionLibrary_DIR=$HOME/CppLibraries/VTKFunctionLibrary
 PNOL_DIR=$HOME/CppLibraries/ParallelNonlinearOptimizationLibrary
 NAS_DIR=$HOME/CppLibraries/NonlinearAlgebraicSolverLibrary
+CardiovascularLibrary_DIR=$HOME/CppLibraries/CardiovascularLibrary
 
 # Paths to TPLs
 OCTAVE_LIB_DIR=/usr/lib/x86_64-linux-gnu
@@ -23,6 +24,7 @@ cmake \
 -D CMAKE_INSTALL_PREFIX:PATH=$INSTALL_DIR \
 -D UtilityFunctionLibrary_INSTALL_DIR=$UtilityFunctionLibrary_DIR/Install \
 -D VTKFunctionLibrary_INSTALL_DIR=$VTKFunctionLibrary_DIR/Install \
+-D CardiovascularLibrary_INSTALL_DIR=$CardiovascularLibrary_DIR/Install \
 -D OCTAVE_INCLUDE_PATH=$OCTAVE_INCLUDE_DIR \
 -D OCTAVE_LIB_PATH=$OCTAVE_LIB_DIR \
 -D PNOL_INSTALL_DIR=$PNOL_DIR/Install \
